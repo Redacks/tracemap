@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://openlayers.org/favicon.ico"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using OpenLayers with Vite</title>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="module" src="./src/main.ts"></script>
+    <div
+      id="hops"
+      class="bg-white rounded-xl absolute right-3 bottom-5 z-10 flex flex-col gap-2 p-2"
+    ></div>
+    <div
+      class="bg-white rounded-xl absolute left-3 bottom-3 p-2 z-10 flex flex-row gap-6"
+    >
+      <input
+        type="text"
+        name="ip"
+        placeholder="Enter IP-Address"
+        class="rounded-md p-2"
+        id="ip"
+      />
+      <button
+        id="button"
+        class="p-4 bg-blue-500 rounded-md text-white disabled:bg-gray-800"
+        onclick="traceroute()"
+        disabled
+      >
+        Traceroute
+      </button>
+    </div>
+  </body>
+</html>
